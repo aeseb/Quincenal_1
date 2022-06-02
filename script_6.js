@@ -43,9 +43,11 @@ Intenté usar await sleep(1000) debajo de la sentencia y el programa se rompe.
 Intente poner 1000 en lugar de null en la sentencia, no funciona.
 */
 
+
 function horneado() {
+
     var i = 1;
-    console.log(`${i} minuto`);
+    console.log(`${i} minuto`); 
     
     for(let i = 2; i <= 10; i++){
 
