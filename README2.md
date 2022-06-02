@@ -1,0 +1,1 @@
+Programa de operaciones simples: resta, asignacion.
