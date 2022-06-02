@@ -25,10 +25,10 @@ let ajoPicado = 4;
 let mantecaBarra = 1;
 let rebanadasBaguette = 2;
 let salKosher = 0.5;
-let CdasPerejilPicado = 2;
+let cdasPerejilPicado = 2;
 let parmesanoRallado = 0.25;
 
-let mantecaDeAjo = mantecaBarra + ajoPicado + salKosher + CdasPerejilPicado;
+let mantecaDeAjo = mantecaBarra + ajoPicado + salKosher + cdasPerejilPicado;
 let panDeAjo = rebanadasBaguette + mantecaDeAjo + parmesanoRallado;
 
 /*
