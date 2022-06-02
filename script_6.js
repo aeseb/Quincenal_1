@@ -42,17 +42,19 @@ No creo que tenga sentido usar switch.
 Intenté usar await sleep(1000) debajo de la sentencia y el programa se rompe.
 Intente poner 1000 en lugar de null en la sentencia, no funciona.
 */
-var i = 1;
+
 function horneado() {
-    
+    var i = 1;
     console.log(`${i} minuto`);
     
     for(let i = 2; i <= 10; i++){
-        setTimeout(console.log.bind(null,`${i} minutos`), 800);
-        //await sleep(1000);  
+
+        setTimeout(console.log.bind(null,`${i} minutos`), 1000);
+        //await sleep(1000);   
+        //console.log(`${i} minutos`); 
     }
 }
   
 horneado();
   
-setTimeout(console.log.bind(null,"\n¡El pan de ajo está listo!"), 1000);
+setTimeout(console.log.bind(null,"\n¡El pan de ajo está listo!"), 1500);
