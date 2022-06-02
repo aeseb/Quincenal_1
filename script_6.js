@@ -49,9 +49,8 @@ function horneado() {
     
     for(let i = 2; i <= 10; i++){
         setTimeout(console.log.bind(null,`${i} minutos`), 800);
-        //await sleep(1000);
+        //await sleep(1000);  
     }
- 
 }
   
 horneado();
