@@ -26,8 +26,23 @@ let ingredientesSecos = cdtaPolvoHornear + pizcaSal + cdasAzucar + tazaHarina;
 let ingredientesHumedos = huevo + cdasAceite + tazaLeche;
 let mezcla = ingredientesSecos + ingredientesHumedos;
 
-while(mezcla == 8.75 && i <= 5){
-    console.log(`Preparando waffle ${i}`);
-    ++i;
+// (Agregado)
+function delay(milliseconds){
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
 }
-console.log("\n¡Ya están listos!");
+
+async function waffles(){
+    while(mezcla == 8.75 && i <= 5){
+        
+        console.log(`Preparando waffle ${i}`);
+        ++i;
+        await delay(700);
+        
+    }
+}
+waffles();
+
+setTimeout(console.log.bind(null,"\n¡Ya están listos!"), 3500);
+
