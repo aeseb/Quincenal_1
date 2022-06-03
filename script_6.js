@@ -31,18 +31,8 @@ let parmesanoRallado = 0.25;
 let mantecaDeAjo = mantecaBarra + ajoPicado + salKosher + cdasPerejilPicado;
 let panDeAjo = rebanadasBaguette + mantecaDeAjo + parmesanoRallado;
 
-/*
-No consigo que las lineas siguientes a "1 minuto" se muestren 
-consecutivamente con un retardo de un segundo (o menos), en cambio
-primero se muestra "1 minuto", y luego de un segundo el resto de la 
-lista sin demoras apreciables.
 
-Intente usar un if y no funcionó, intente usar while y do-whyle, no funcionó.
-No creo que tenga sentido usar switch.
-Intenté usar await sleep(1000) debajo de la sentencia y el programa se rompe.
-Intente poner 1000 en lugar de null en la sentencia, no funciona.
-*/
-
+// (Agregado)
 function delay(milliseconds){
     return new Promise(resolve => {
         setTimeout(resolve, milliseconds);
@@ -55,7 +45,7 @@ function delay(milliseconds){
     console.log(`${i} minuto`); 
     
     for(let i = 2; i <= 10; i++){
-        await delay(1000);
+        await delay(700);
         console.log(`${i} minutos`);
               
     }
@@ -63,6 +53,4 @@ function delay(milliseconds){
   
 horneado();
   
-setTimeout(console.log.bind(null,"\n¡El pan de ajo está listo!"), 10000);
-
-
+setTimeout(console.log.bind(null,"\n¡El pan de ajo está listo!"), 7000);
