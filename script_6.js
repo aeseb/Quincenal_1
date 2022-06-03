@@ -43,20 +43,26 @@ Intenté usar await sleep(1000) debajo de la sentencia y el programa se rompe.
 Intente poner 1000 en lugar de null en la sentencia, no funciona.
 */
 
+function delay(milliseconds){
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+}
 
-function horneado() {
+ async function horneado() {
 
     var i = 1;
     console.log(`${i} minuto`); 
     
     for(let i = 2; i <= 10; i++){
-
-        setTimeout(console.log.bind(null,`${i} minutos`), 1000);
-        //await sleep(1000);   
-        //console.log(`${i} minutos`); 
+        await delay(1000);
+        console.log(`${i} minutos`);
+              
     }
 }
   
 horneado();
   
-setTimeout(console.log.bind(null,"\n¡El pan de ajo está listo!"), 1500);
+setTimeout(console.log.bind(null,"\n¡El pan de ajo está listo!"), 10000);
+
+
